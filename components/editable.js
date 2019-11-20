@@ -1,6 +1,6 @@
 import Vue, { computed, ref, createElement as h, onMounted } from "./vue.js";
 import "https://unpkg.com/prismjs";
-import cssLoader from "./utils/css-loader.js";
+import cssLoader from "../utils/css-loader.js";
 cssLoader(
   "https://cdn.jsdelivr.net/npm/prism-themes/themes/prism-synthwave84.css"
 );
