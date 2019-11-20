@@ -1,4 +1,4 @@
-import Vue, { ref, reactive, onUnmounted, computed } from "/vue.js";
+import Vue, { ref, reactive, onUnmounted, computed } from "./vue.js";
 import "https://unpkg.com/vue-p5@0.8.0-rc4/dist/vue-p5.js";
 import "https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.28/Tone.js";
 
@@ -50,7 +50,7 @@ const tryFn = (object, str, default_, setErr) => {
 new Vue({
   el: "#app",
   components: {
-    Editable: () => import("/components/editable.js")
+    Editable: () => import("./components/editable.js")
   },
   setup() {
     const error = reactive({
