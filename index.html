@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">
+      <pre class="language-"><span class="token comment">setup(Tone)</span></pre>
+      <editable :content.sync="setup" lang="js"></editable>
+      <pre class="language-"><span class="token comment">return draw(sketch, scope)</span></pre>
+      <editable :content.sync="sketch.draw" lang="js"></editable>
+      <component :is="create" class="render"></component>
+      <pre v-for="(e, k) in error" :key="k" v-if="e">({{ k }}) {{ e }}</pre>
+    </div>
+  </body>
+  <script type="text/javascript" src="http://livejs.com/live.js"></script>
+  <script src="index.js" type="module"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #app {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content min-content 1fr;
+      padding: 1rem;
+      height: 100vh;
+    }
+    #app > div:first-child {
+      padding: 1rem;
+    }
+    #app > pre:not(.language-) {
+      color: red;
+      padding: 1rem;
+    }
+    #app > .language- {
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+    .render {
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      color: white;
+    }
+  </style>
+</html>
