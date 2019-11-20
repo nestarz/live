@@ -1,4 +1,4 @@
-import Vue, { computed, ref, createElement as h, onMounted } from "./vue.js";
+import Vue, { computed, ref, createElement as h, onMounted } from "../vue.js";
 import "https://unpkg.com/prismjs";
 import cssLoader from "../utils/css-loader.js";
 cssLoader(
